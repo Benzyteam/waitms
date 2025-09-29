@@ -6,6 +6,6 @@ app = FastAPI()
 @app.post("/wait")
 async def wait_api(request: Request):
     kwargs = await request.json()
-    await asyncio.sleep(100)
+    await asyncio.sleep(40)
     
     return {"data": kwargs}
